@@ -1,0 +1,149 @@
+:root {
+  /* ==========================================================================
+     РІВЕНЬ 1: Primitive Tokens (Базові значення палітри, типографіки, відступів)
+     ========================================================================== */
+  --color-white: #ffffff;
+  --color-black: #090d16;
+
+  --neutral-50: #f8fafc;
+  --neutral-100: #f1f5f9;
+  --neutral-200: #e2e8f0;
+  --neutral-300: #cbd5e1;
+  --neutral-400: #94a3b8;
+  --neutral-500: #64748b;
+  --neutral-700: #334155;
+  --neutral-800: #1e293b;
+  --neutral-900: #0f172a;
+
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+  --blue-900: #1e3a8a;
+
+  --red-50: #fef2f2;
+  --red-500: #ef4444;
+  --red-600: #dc2626;
+  --red-700: #b91c1c;
+  --red-950: #450a0a;
+
+  --emerald-500: #10b981;
+  --emerald-600: #059669;
+
+  --font-family-sans: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.5rem;     /* 24px */
+
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+
+  /* ==========================================================================
+     РІВЕНЬ 2: Semantic Tokens (Ролі в інтерфейсі — Світла тема за замовчуванням)
+     ========================================================================== */
+  --bg-canvas: var(--neutral-50);
+  --bg-surface: var(--color-white);
+  --bg-subtle: var(--neutral-100);
+  --bg-skeleton-base: var(--neutral-200);
+  --bg-skeleton-highlight: var(--neutral-100);
+
+  --text-primary: var(--neutral-900);
+  --text-secondary: var(--neutral-500);
+  --text-inverse: var(--color-white);
+
+  --border-default: var(--neutral-200);
+  --border-strong: var(--neutral-300);
+
+  --color-primary: var(--blue-600);
+  --color-primary-hover: var(--blue-700);
+  --color-primary-focus: var(--blue-500);
+
+  --color-danger: var(--red-600);
+  --color-danger-hover: var(--red-700);
+  --color-danger-surface: var(--red-50);
+
+  --color-success: var(--emerald-600);
+
+  /* ==========================================================================
+     РІВЕНЬ 3: Component Tokens (Прив'язка до конкретних елементів керування)
+     ========================================================================== */
+  /* Buttons */
+  --btn-radius: var(--radius-sm);
+  --btn-padding-y: var(--space-2);
+  --btn-padding-x: var(--space-4);
+  --btn-font-size: var(--font-size-sm);
+
+  --btn-primary-bg: var(--color-primary);
+  --btn-primary-bg-hover: var(--color-primary-hover);
+  --btn-primary-text: var(--text-inverse);
+
+  --btn-secondary-bg: var(--bg-surface);
+  --btn-secondary-bg-hover: var(--bg-subtle);
+  --btn-secondary-text: var(--text-primary);
+  --btn-secondary-border: var(--border-strong);
+
+  --btn-danger-bg: var(--color-danger);
+  --btn-danger-bg-hover: var(--color-danger-hover);
+  --btn-danger-text: var(--text-inverse);
+
+  /* Inputs */
+  --input-bg: var(--bg-surface);
+  --input-text: var(--text-primary);
+  --input-placeholder: var(--text-secondary);
+  --input-border: var(--border-strong);
+  --input-border-focus: var(--color-primary-focus);
+  --input-border-error: var(--color-danger);
+  --input-radius: var(--radius-sm);
+  --input-padding-y: var(--space-2);
+  --input-padding-x: var(--space-3);
+
+  /* Cards */
+  --card-bg: var(--bg-surface);
+  --card-border: var(--border-default);
+  --card-radius: var(--radius-md);
+  --card-padding: var(--space-6);
+  --card-shadow: var(--shadow-sm);
+}
+
+/* Перевизначення ВИКЛЮЧНО семантичних токенів для темної теми */
+[data-theme="dark"] {
+  --bg-canvas: var(--color-black);
+  --bg-surface: var(--neutral-900);
+  --bg-subtle: var(--neutral-800);
+  --bg-skeleton-base: var(--neutral-800);
+  --bg-skeleton-highlight: var(--neutral-700);
+
+  --text-primary: var(--neutral-50);
+  --text-secondary: var(--neutral-400);
+  --text-inverse: var(--color-white);
+
+  --border-default: var(--neutral-800);
+  --border-strong: var(--neutral-700);
+
+  --color-primary: var(--blue-500);
+  --color-primary-hover: var(--blue-600);
+  --color-primary-focus: var(--blue-500);
+
+  --color-danger: var(--red-500);
+  --color-danger-hover: var(--red-600);
+  --color-danger-surface: var(--red-950);
+
+  --color-success: var(--emerald-500);
+}
